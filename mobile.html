@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" name="viewport">
+  <title>Pedro Peixoto Carvalho | Portfólio Mobile</title>
+  <meta name="description" content="Versão portátil e mobile do portfólio de Pedro Peixoto Carvalho - Produção Multimídia & 3D.">
+  <meta name="theme-color" content="#050b14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 with Forms & Container Queries -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#050b14',
+              surface: '#0b1526',
+              card: '#0f1c32',
+              cyan: '#00d2ff',
+              cyanHover: '#38bdf8',
+              accent: '#d946ef',
+              border: '#1e293b'
+            }
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- BEGIN: Custom Mobile Styles -->
+  <style data-purpose="mobile-optimizations">
+    body {
+      background-color: #050b14;
+      color: #f1f5f9;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .neon-cyan-glow {
+      box-shadow: 0 0 25px -5px rgba(0, 210, 255, 0.35);
+    }
+    .neon-card-glow {
+      box-shadow: 0 4px 20px -5px rgba(0, 210, 255, 0.15);
+    }
+    ::selection {
+      background-color: #00d2ff;
+      color: #050b14;
+    }
+    /* Suporte a entalhes / barra de gestos do iPhone/Android */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 16px);
+    }
+    .bottom-nav-blur {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  </style>
+  <!-- END: Custom Mobile Styles -->
+</head>
+<body class="font-sans antialiased min-h-screen bg-brand-dark text-slate-100 selection:bg-brand-cyan selection:text-brand-dark flex flex-col justify-between pb-24">
+
+  <!-- ========================================================================= -->
+  <!-- BARRA DE CABEÇALHO SUPERIOR MOBILE (FIXA)                                -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-brand-dark/95 border-b border-brand-border/60 transition-all px-4 py-3 flex items-center justify-between" id="mobile-top-header">
+    <a class="flex flex-col" href="#inicio" aria-label="Voltar ao início">
+      <span class="font-heading font-extrabold text-sm tracking-wider text-white">
+        PEDRO PEIXOTO CARVALHO
+      </span>
+      <span class="text-[10px] text-brand-cyan uppercase tracking-widest flex items-center gap-1.5 mt-0.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+        Disponível para projetos
+      </span>
+    </a>
+
+    <!-- Ação rápida: WhatsApp no topo -->
+    <a
+      href="https://wa.me/5551999720426"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-2 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan hover:bg-brand-cyan hover:text-brand-dark active:scale-95 transition-all"
+      aria-label="Abrir conversa no WhatsApp"
+      title="Falar no WhatsApp"
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.012.83 3.09.83h.005c3.181 0 5.768-2.586 5.768-5.766 0-1.541-.6-2.99-1.69-4.08-1.09-1.09-2.539-1.69-4.077-1.69m7.747 9.845c-.328.924-1.644 1.705-2.28 1.76-.637.054-1.464.08-4.301-1.094-3.411-1.41-5.617-4.9-5.787-5.127-.17-.227-1.385-1.846-1.385-3.52 0-1.674.876-2.498 1.189-2.84.312-.341.68-.426.907-.426.227 0 .454.002.652.012.21.01.492-.08.769.585.284.681.964 2.356 1.049 2.527.085.17.142.369.028.596-.114.227-.17.369-.341.568-.17.199-.358.444-.511.597-.17.17-.348.355-.15.696.198.341.88 1.45 1.887 2.348 1.294 1.154 2.385 1.512 2.726 1.682.341.17.54.142.74-.085.198-.227.852-.994 1.079-1.335.227-.341.454-.284.769-.17.312.114 1.986.937 2.327 1.108.341.17.568.256.652.398.085.142.085.823-.243 1.747z"/>
+      </svg>
+    </a>
+  </header>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- 1. SEÇÃO INÍCIO (HERO MOBILE)                                             -->
+    <!-- ========================================================================= -->
+    <section class="relative pt-6 pb-12 px-4 overflow-hidden border-b border-brand-border/40" id="inicio">
+      <!-- Brilhos Ambientais no Fundo -->
+      <div class="absolute -top-10 -left-10 w-64 h-64 bg-brand-cyan/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute bottom-0 right-0 w-64 h-64 bg-fuchsia-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-md mx-auto space-y-5">
+        <!-- Badge -->
+        <div class="inline-block">
+          <span class="text-[11px] font-heading font-bold uppercase tracking-wider text-brand-cyan bg-brand-cyan/10 px-3 py-1.5 rounded-md border border-brand-cyan/30 block leading-tight">
+            PRODUÇÃO MULTIMÍDIA | 3D &amp; ILUSTRAÇÃO DIGITAL
+          </span>
+        </div>
+
+        <!-- Título Principal -->
+        <h1 class="text-2xl sm:text-3xl text-white font-heading font-extrabold tracking-tight leading-snug">
+          Criando mundos e personagens através do digital.
+        </h1>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Explorações tridimensionais, iluminação de ambientes e modelagem conceitual para projetos multimídia.
+        </p>
+
+        <!-- Botões de Ação Touch-Friendly -->
+        <div class="grid grid-cols-2 gap-3 pt-1">
+          <a
+            href="#projetos"
+            class="flex items-center justify-center py-3 px-4 rounded-xl bg-[#00F0FF] text-black font-semibold text-xs tracking-wider uppercase active:scale-95 transition-all text-center shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+          >
+            Ver Projetos
+          </a>
+          <a
+            href="#contato"
+            class="flex items-center justify-center py-3 px-4 rounded-xl bg-brand-surface border border-brand-border text-slate-200 font-semibold text-xs tracking-wider uppercase active:scale-95 hover:border-brand-cyan hover:text-brand-cyan transition-all text-center"
+          >
+            Contato
+          </a>
+        </div>
+
+        <!-- Imagem 3D Destaque Mobile -->
+        <div class="pt-2">
+          <div class="relative rounded-2xl overflow-hidden border border-brand-cyan/40 neon-cyan-glow bg-brand-surface aspect-[16/10]">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOnsjLuLej93P5bGo5OA8BKdR8fcffA3aAHSeQOX9PYbWRwUi4Z_dCxVb2zURlKdDddLRBVnxXmRK2Jo9CSdDzOBS7_WwtxELhCXGBL7-lEllXqPuHxae9_UOZWnUdN4b6Zdm8ksxtk6TLWjKohnTlvY1aGZTt_2lDDi67aQsV7DKY5WufNSrJsAGuAEIf87KWiRMsLyVnXwvhBS2UGatxE19r48l2l-BAI_0-BQCih5fXUeBAD1CE"
+              alt="Renderização 3D de cena diorama de sala de estar completa com sofá, televisão, iluminação cênica de estúdio e estantes modeladas"
+              class="w-full h-full object-cover object-center"
+              loading="eager"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center">
+              <span class="text-[10px] uppercase tracking-wider text-slate-200 font-heading font-semibold bg-brand-dark/80 px-2.5 py-1 rounded backdrop-blur-sm">
+                DESTAQUE 3D // CENA DIORAMA
+              </span>
+              <span class="h-2 w-2 rounded-full bg-brand-cyan animate-pulse"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. SEÇÃO PROJETOS (MOBILE STACK)                                          -->
+    <!-- ========================================================================= -->
+    <section class="py-12 px-4 bg-brand-surface/40 border-b border-brand-border" id="projetos">
+      <div class="max-w-md mx-auto space-y-6">
+        <!-- Cabeçalho -->
+        <div>
+          <span class="text-brand-cyan font-heading font-bold text-xs tracking-wider uppercase block">Portfólio 2024</span>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold uppercase text-white mt-1">
+            PROJETOS // SELEÇÃO
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
+            Explorações tridimensionais, iluminação de ambientes e modelagem conceitual para projetos multimídia.
+          </p>
+        </div>
+
+        <!-- Lista de Cards Verticais Mobile -->
+        <div class="space-y-6">
+
+          <!-- Card 1: Katana 3D -->
+          <article class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden flex flex-col neon-card-glow active:scale-[0.99] transition-all" data-purpose="mobile-project-card">
+            <div class="relative aspect-video overflow-hidden bg-slate-900" onclick="openMobileProjectModal('katana')">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIZZOvS0c9C7FLPBycfnfsTQ0t8XMUC4C-IkBkXjlwrqOGlWoL9mMvVZudspRN6RobTSd9HZLHlr9RWIYPtKeXWdtE1h-RbcJEAAsNIVWQAkzQVz7P-2igcnABX-NfPDlxCPKiR0jVsV8bJ-aFqJqcuOBp5g5EYVYUye-Gomjjr6Vyp0uS09M-eRSfvo3NNanIrXqcKCh3z2c7loMJeHd5bUxztC0r343wKEX7t9NzE4C9D7TM3pkD"
+                alt="Renderização 3D de Katana japonesa com empunhadura preta detalhada e lâmina metálica polida com acabamento realista"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-3 right-3 text-[10px] bg-brand-dark/80 text-brand-cyan px-2 py-1 rounded-md border border-brand-cyan/30 font-heading">
+                Toque para ampliar
+              </span>
+            </div>
+            <div class="p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-2.5">
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">Objeto 3D</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Render Cycles</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">3D Prop</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg uppercase text-white mb-1.5">
+                  PROJETO 01 // OBJETO 3D
+                </h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Modelagem poligonal detalhada, escultura e texturização realista de katana japonesa, com acabamento refinado na lâmina e empunhadura para render em alta fidelidade.
+                </p>
+              </div>
+              <button
+                type="button"
+                onclick="openMobileProjectModal('katana')"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-card border border-brand-border text-brand-cyan hover:bg-brand-cyan hover:text-brand-dark font-heading font-semibold text-xs uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2"
+              >
+                <span>Ver detalhes completos</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: Ilustração Sasuke -->
+          <article class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden flex flex-col neon-card-glow active:scale-[0.99] transition-all" data-purpose="mobile-project-card">
+            <div class="relative aspect-video overflow-hidden bg-slate-900" onclick="openMobileProjectModal('ilustracao')">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiO0iAJb1a3xIZvCc4_BrSeC3rENcyWCeZkjNgPjhHHVAYYPQhPc__wg1qVZdL3Tzus3fQSoEHsgJI00wUhG3WP4LGMkdU77fzKg104TjwNJJsDxyIudhXjdavs4OWEzeP-8bKWvsDDd4J3QfFdDMMzONYs4qIL1O2WiPK2lIGvNY8yUO7Xg4moVYafq3VbqvRrhqnc7Q_lUcdWqHYdYF-LrVLDPA-gEJCcc3bVOKl8aNYAXdTYKTr"
+                alt="Ilustração digital em cel shading de personagem anime estilo Sasuke com marcas da maldição na face e balão de fala Hey"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-3 right-3 text-[10px] bg-brand-dark/80 text-brand-cyan px-2 py-1 rounded-md border border-brand-cyan/30 font-heading">
+                Toque para ampliar
+              </span>
+            </div>
+            <div class="p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-2.5">
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">Pintura Digital</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Lineart &amp; Cor</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Fanart</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Illustrator</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg uppercase text-white mb-1.5">
+                  PROJETO 02 // ILUSTRAÇÃO
+                </h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Ilustração digital estilizada inspirada no universo anime, com estudo anatômico, sombreamento em cel shading e composição com marca da maldição.
+                </p>
+              </div>
+              <button
+                type="button"
+                onclick="openMobileProjectModal('ilustracao')"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-card border border-brand-border text-brand-cyan hover:bg-brand-cyan hover:text-brand-dark font-heading font-semibold text-xs uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2"
+              >
+                <span>Ver detalhes completos</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3: Jake 3D -->
+          <article class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden flex flex-col neon-card-glow active:scale-[0.99] transition-all" data-purpose="mobile-project-card">
+            <div class="relative aspect-video overflow-hidden bg-slate-900" onclick="openMobileProjectModal('jake')">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWk4rQBXdZVyq6BY_5ozaRxBkVxRaGF_p8hooUTfePaKxW4sLNXKSTfEU4HS7hKnNhe-dyOV0oP12bUhEP1j1-J-V8bIZnc423rcRe2oufRQOTtec66SEVGfkvmuaqaRNKBmGmz51502iQPcqwV3P_Cc_oOfjHZtRZJCY-1yzPtoNsY4XceyJP7aKi4FOaOeg5adI7ZLr3k3bnnnf5w1-hLcbFQ7VRo8z3AK6Z6_DsB3ITL1EiRVNu"
+                alt="Modelagem e texturização 3D do personagem Jake (Hora de Aventura) com iluminação pontual de estúdio e materiais estilizados"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-3 right-3 text-[10px] bg-brand-dark/80 text-brand-cyan px-2 py-1 rounded-md border border-brand-cyan/30 font-heading">
+                Toque para ampliar
+              </span>
+            </div>
+            <div class="p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-2.5">
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">Modelagem 3D</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Low Poly / Stylized</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Blender</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Lighting &amp; Shading</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg uppercase text-white mb-1.5">
+                  PROJETO 03 // PERSONAGEM 3D
+                </h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Modelagem e texturização 3D do personagem Jake (Adventure Time), com foco em topologia limpa, materiais cartunescos e renderização com iluminação direta de estúdio.
+                </p>
+              </div>
+              <button
+                type="button"
+                onclick="openMobileProjectModal('jake')"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-card border border-brand-border text-brand-cyan hover:bg-brand-cyan hover:text-brand-dark font-heading font-semibold text-xs uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2"
+              >
+                <span>Ver detalhes completos</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. SEÇÃO COMPETÊNCIAS (MOBILE CARDS)                                      -->
+    <!-- ========================================================================= -->
+    <section class="py-12 px-4 bg-brand-dark border-b border-brand-border" id="competencias">
+      <div class="max-w-md mx-auto space-y-6">
+        <div>
+          <span class="text-brand-cyan font-heading font-bold text-xs tracking-wider uppercase block">Habilidades &amp; Ferramentas</span>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold uppercase text-white mt-1">
+            COMPETÊNCIAS // SOFTWARES
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
+            Conhecimentos técnicos e softwares aplicados na produção multimídia, modelagem tridimensional e arte visual.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <!-- Card 1: Blender / 3D -->
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-sm text-white">Blender / 3D</h3>
+              <p class="text-slate-400 text-[11px] leading-relaxed mt-0.5">Modelagem poligonal detalhada de objetos, props e personagens, topologia limpa e iluminação de estúdio.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Ilustração Digital -->
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-sm text-white">Ilustração Digital</h3>
+              <p class="text-slate-400 text-[11px] leading-relaxed mt-0.5">Estudo anatômico, pintura digital estilizada, desenvolvimento de lineart expressiva e técnicas de cel shading.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Unreal Engine -->
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-sm text-white">Unreal Engine</h3>
+              <p class="text-slate-400 text-[11px] leading-relaxed mt-0.5">Estruturação e visualização de assets 3D em tempo real, preparação para jogos, animação e cenários interativos.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Direção de Arte -->
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-sm text-white">Direção de Arte</h3>
+              <p class="text-slate-400 text-[11px] leading-relaxed mt-0.5">Narrativa visual consistente, harmonia cromática, composição estética e identidade visual para mídias digitais.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Motion Graphics -->
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-sm text-white">Motion Graphics</h3>
+              <p class="text-slate-400 text-[11px] leading-relaxed mt-0.5">Design em movimento, composição gráfica animada e dinamismo visual para projetos audiovisuais e multimídia.</p>
+            </div>
+          </div>
+
+          <!-- Card 6: Texturização PBR -->
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-sm text-white">Texturização PBR</h3>
+              <p class="text-slate-400 text-[11px] leading-relaxed mt-0.5">Configuração de materiais fisicamente realistas (PBR), shaders customizados, mapas de rugosidade e metalicidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tags adicionais -->
+        <div class="pt-4 border-t border-brand-border/60">
+          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-heading block mb-2.5 text-center">
+            Especialidades Adicionais
+          </span>
+          <div class="flex flex-wrap justify-center gap-1.5">
+            <span class="px-2.5 py-1 rounded-md bg-brand-card border border-brand-border text-slate-300 text-[11px]">Render Cycles</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-card border border-brand-border text-slate-300 text-[11px]">3D Prop Modeling</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-card border border-brand-border text-slate-300 text-[11px]">Lineart &amp; Cor</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-card border border-brand-border text-slate-300 text-[11px]">Adobe Illustrator</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-card border border-brand-border text-slate-300 text-[11px]">Low Poly / Stylized</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-card border border-brand-border text-slate-300 text-[11px]">Lighting &amp; Shading</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SEÇÃO SOBRE (PENÚLTIMA SEÇÃO)                                          -->
+    <!-- ========================================================================= -->
+    <section class="py-12 px-4 bg-brand-surface/50 border-b border-brand-border" id="sobre">
+      <div class="max-w-md mx-auto space-y-6 text-center sm:text-left">
+        <div>
+          <span class="text-brand-cyan font-heading font-bold text-xs tracking-wider uppercase bg-brand-cyan/10 px-3 py-1 rounded-md border border-brand-cyan/30 inline-block">
+            Sobre o Artista
+          </span>
+        </div>
+
+        <!-- Foto de Perfil Centralizada -->
+        <div class="flex justify-center">
+          <div class="relative w-48 h-48 rounded-2xl overflow-hidden border border-brand-cyan/40 neon-cyan-glow bg-brand-surface">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgaw75wb1MQCdD7pG12QV2guDhsRn_2QBaqWlArsZBXZ3ma_ndPFLC5xcB_cUMWrTdK_4IQ0Neby2iNEdvKphW1mfwmYN-IRVzSJHBGFrL6Nc1eVwmK7tgr72dWrCiAHWp8buPS-TUIXeu6-69I77GXhbVhfokMjbDdMabdmnBqIEd5JK0LDJjUHR_OjeQ3qkZXHfDJjlsvvluMe0LwmSTt4y06iNanwzSIuTpUucpqLBDsUareA_z"
+              alt="Fotografia de perfil de Pedro Peixoto Carvalho, Produtor Multimídia e Artista 3D"
+              class="w-full h-full object-cover object-center"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-2 left-2 right-2 text-center">
+              <span class="text-[10px] uppercase tracking-wider text-slate-300 font-heading font-semibold bg-brand-dark/80 px-2 py-0.5 rounded backdrop-blur-sm">
+                Pedro Peixoto Carvalho
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="font-heading font-black text-2xl sm:text-3xl uppercase tracking-tight text-white leading-tight">
+          PEDRO PEIXOTO CARVALHO
+        </h2>
+
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed text-left">
+          Produtor Multimídia especializado em modelagem 3D e ilustração digital. Apaixonado por dar vida a personagens, props e cenários estilizados com foco em narrativa visual e topologia limpa. Atualmente disponível para projetos freelance e colaborações em jogos, animação e design.
+        </p>
+
+        <a
+          href="#contato"
+          class="w-full py-3 px-4 rounded-xl bg-brand-surface border border-brand-border text-brand-cyan hover:border-brand-cyan font-heading font-semibold text-xs uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2"
+        >
+          <span>Conversar sobre projetos</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. SEÇÃO CONTATO (ÚLTIMA SEÇÃO)                                           -->
+    <!-- ========================================================================= -->
+    <section class="py-12 px-4 bg-brand-dark border-b border-brand-border" id="contato">
+      <div class="max-w-md mx-auto space-y-6 text-center">
+        <div>
+          <span class="text-brand-cyan font-heading font-bold text-xs tracking-wider uppercase bg-brand-cyan/10 px-3 py-1 rounded-md border border-brand-cyan/30 inline-block">
+            Vamos conversar?
+          </span>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl uppercase tracking-tight text-white mt-2">
+            CONTATO
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
+            Disponível para novos projetos de arte 3D, ilustrações autorais, direção visual e parcerias comerciais. Entre em contato através dos canais diretos ou pelas redes sociais.
+          </p>
+        </div>
+
+        <!-- Cartões de Contato Rápido em Tela Cheia -->
+        <div class="space-y-3 pt-2">
+          <!-- WhatsApp Card -->
+          <a
+            href="https://wa.me/5551999720426"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full p-4 rounded-2xl bg-brand-surface border border-brand-cyan/40 hover:border-brand-cyan flex items-center gap-4 active:scale-95 transition-all text-left shadow-lg shadow-brand-cyan/10"
+          >
+            <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 flex items-center justify-center text-brand-cyan shrink-0">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.012.83 3.09.83h.005c3.181 0 5.768-2.586 5.768-5.766 0-1.541-.6-2.99-1.69-4.08-1.09-1.09-2.539-1.69-4.077-1.69m7.747 9.845c-.328.924-1.644 1.705-2.28 1.76-.637.054-1.464.08-4.301-1.094-3.411-1.41-5.617-4.9-5.787-5.127-.17-.227-1.385-1.846-1.385-3.52 0-1.674.876-2.498 1.189-2.84.312-.341.68-.426.907-.426.227 0 .454.002.652.012.21.01.492-.08.769.585.284.681.964 2.356 1.049 2.527.085.17.142.369.028.596-.114.227-.17.369-.341.568-.17.199-.358.444-.511.597-.17.17-.348.355-.15.696.198.341.88 1.45 1.887 2.348 1.294 1.154 2.385 1.512 2.726 1.682.341.17.54.142.74-.085.198-.227.852-.994 1.079-1.335.227-.341.454-.284.769-.17.312.114 1.986.937 2.327 1.108.341.17.568.256.652.398.085.142.085.823-.243 1.747z"/>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <span class="text-[11px] text-brand-cyan uppercase tracking-wider font-semibold block">Conversar no WhatsApp</span>
+              <span class="text-sm font-heading font-bold text-white block">(55) 51 99972-0426</span>
+            </div>
+            <span class="text-slate-400 text-lg">&rarr;</span>
+          </a>
+
+          <!-- Email Card -->
+          <a
+            href="mailto:pedropcarvalho276@gmail.com"
+            class="w-full p-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-cyan/50 flex items-center gap-4 active:scale-95 transition-all text-left"
+          >
+            <div class="w-12 h-12 rounded-xl bg-brand-card flex items-center justify-center text-slate-300 shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div class="flex-grow truncate">
+              <span class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">Enviar E-mail</span>
+              <span class="text-xs sm:text-sm font-heading font-bold text-white truncate block">pedropcarvalho276@gmail.com</span>
+            </div>
+            <span class="text-slate-400 text-lg">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Redes Sociais e Portfólios -->
+        <div class="pt-6 border-t border-brand-border/40 space-y-3">
+          <span class="text-[11px] uppercase tracking-widest text-slate-400 font-heading block">
+            Redes e Portfólios
+          </span>
+          <div class="grid grid-cols-2 gap-2">
+            <a class="py-2.5 px-3 rounded-xl border border-slate-700 bg-brand-surface/60 text-slate-300 text-xs font-semibold uppercase hover:border-brand-cyan hover:text-brand-cyan active:scale-95 transition-colors" href="#contato">ArtStation</a>
+            <a class="py-2.5 px-3 rounded-xl border border-slate-700 bg-brand-surface/60 text-slate-300 text-xs font-semibold uppercase hover:border-brand-cyan hover:text-brand-cyan active:scale-95 transition-colors" href="#contato">Behance</a>
+            <a class="py-2.5 px-3 rounded-xl border border-slate-700 bg-brand-surface/60 text-slate-300 text-xs font-semibold uppercase hover:border-brand-cyan hover:text-brand-cyan active:scale-95 transition-colors" href="#contato">LinkedIn</a>
+            <a class="py-2.5 px-3 rounded-xl border border-slate-700 bg-brand-surface/60 text-slate-300 text-xs font-semibold uppercase hover:border-brand-cyan hover:text-brand-cyan active:scale-95 transition-colors" href="#contato">Instagram</a>
+          </div>
+          <p class="text-[10px] text-slate-500 italic">
+            * Insira as URLs definitivas das suas contas.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- RODAPÉ MOBILE                                                             -->
+  <!-- ========================================================================= -->
+  <footer class="bg-brand-dark border-t border-brand-border py-6 px-4 text-center">
+    <p class="text-[11px] text-slate-400">
+      PEDRO PEIXOTO CARVALHO &copy; 2024. Todos os direitos reservados. Produção Multimídia.
+    </p>
+    <a href="#inicio" class="inline-block mt-3 text-xs text-brand-cyan font-heading hover:underline">
+      Voltar ao Topo &uarr;
+    </a>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- BARRA DE NAVEGAÇÃO INFERIOR MOBILE (BOTTOM APP BAR)                       -->
+  <!-- ========================================================================= -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-brand-dark/95 border-t border-brand-border bottom-nav-blur pb-safe" aria-label="Navegação rápida inferior">
+    <div class="max-w-md mx-auto grid grid-cols-5 h-16 items-center px-1">
+      <!-- 1. Início -->
+      <a href="#inicio" class="mobile-tab flex flex-col items-center justify-center text-brand-cyan py-1 active:scale-90 transition-all" data-target="inicio" aria-label="Ir para Início">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+        </svg>
+        <span class="text-[10px] font-medium tracking-tight">Início</span>
+      </a>
+
+      <!-- 2. Projetos -->
+      <a href="#projetos" class="mobile-tab flex flex-col items-center justify-center text-slate-400 hover:text-brand-cyan py-1 active:scale-90 transition-all" data-target="projetos" aria-label="Ir para Projetos">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+        </svg>
+        <span class="text-[10px] font-medium tracking-tight">Projetos</span>
+      </a>
+
+      <!-- 3. Competências -->
+      <a href="#competencias" class="mobile-tab flex flex-col items-center justify-center text-slate-400 hover:text-brand-cyan py-1 active:scale-90 transition-all" data-target="competencias" aria-label="Ir para Competências">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+        </svg>
+        <span class="text-[10px] font-medium tracking-tight">Skills</span>
+      </a>
+
+      <!-- 4. Sobre -->
+      <a href="#sobre" class="mobile-tab flex flex-col items-center justify-center text-slate-400 hover:text-brand-cyan py-1 active:scale-90 transition-all" data-target="sobre" aria-label="Ir para Sobre">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <span class="text-[10px] font-medium tracking-tight">Sobre</span>
+      </a>
+
+      <!-- 5. Contato -->
+      <a href="#contato" class="mobile-tab flex flex-col items-center justify-center text-slate-400 hover:text-brand-cyan py-1 active:scale-90 transition-all" data-target="contato" aria-label="Ir para Contato">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+        <span class="text-[10px] font-medium tracking-tight">Contato</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========================================================================= -->
+  <!-- BOTTOM SHEET / MODAL MOBILE DE DETALHES DO PROJETO                        -->
+  <!-- ========================================================================= -->
+  <div id="mobile-project-modal" class="fixed inset-0 z-50 hidden items-end justify-center bg-black/85 backdrop-blur-sm p-0" role="dialog" aria-modal="true" aria-labelledby="m-modal-title">
+    <div class="relative w-full max-w-lg bg-brand-surface border-t border-brand-cyan/40 rounded-t-3xl overflow-hidden max-h-[90vh] flex flex-col shadow-2xl animate-in slide-in-from-bottom duration-300">
+      <!-- Indicador de barra puxadora (Handle) -->
+      <div class="w-full flex justify-center pt-3 pb-1" onclick="closeMobileProjectModal()">
+        <div class="w-12 h-1 rounded-full bg-slate-600"></div>
+      </div>
+
+      <!-- Botão Fechar -->
+      <button type="button" onclick="closeMobileProjectModal()" class="absolute top-3 right-3 p-2 rounded-full bg-brand-dark/80 text-slate-300 hover:text-white" aria-label="Fechar detalhes">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Imagem Ampliada -->
+      <div class="relative aspect-video bg-black/40 overflow-hidden shrink-0 mt-2">
+        <img id="m-modal-image" src="" alt="" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Conteúdo com rolagem -->
+      <div class="p-5 space-y-3.5 overflow-y-auto">
+        <div id="m-modal-tags" class="flex flex-wrap gap-1.5"></div>
+        <h3 id="m-modal-title" class="font-heading font-extrabold text-xl text-white uppercase"></h3>
+        <p id="m-modal-description" class="text-slate-300 text-xs sm:text-sm leading-relaxed"></p>
+
+        <div class="pt-3 border-t border-brand-border space-y-2">
+          <a id="m-modal-contact-link" href="https://wa.me/5551999720426" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-cyan text-brand-dark font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 active:scale-95 transition-all text-center">
+            Falar sobre este projeto no WhatsApp &rarr;
+          </a>
+          <button type="button" onclick="closeMobileProjectModal()" class="w-full py-2.5 rounded-xl bg-brand-card border border-brand-border text-slate-300 text-xs font-semibold active:scale-95 transition-colors">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SCRIPTS MOBILE: SCROLLSPY, BOTTOM TAB E BOTTOM SHEET                      -->
+  <!-- ========================================================================= -->
+  <script>
+    const mobileProjectsData = {
+      katana: {
+        title: "PROJETO 01 // OBJETO 3D",
+        tags: ["Objeto 3D", "Render Cycles", "3D Prop"],
+        desc: "Modelagem poligonal detalhada, escultura e texturização realista de katana japonesa, com acabamento refinado na lâmina e empunhadura para render em alta fidelidade.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIZZOvS0c9C7FLPBycfnfsTQ0t8XMUC4C-IkBkXjlwrqOGlWoL9mMvVZudspRN6RobTSd9HZLHlr9RWIYPtKeXWdtE1h-RbcJEAAsNIVWQAkzQVz7P-2igcnABX-NfPDlxCPKiR0jVsV8bJ-aFqJqcuOBp5g5EYVYUye-Gomjjr6Vyp0uS09M-eRSfvo3NNanIrXqcKCh3z2c7loMJeHd5bUxztC0r343wKEX7t9NzE4C9D7TM3pkD",
+        alt: "Render 3D de Katana japonesa com empunhadura preta detalhada e lâmina metálica polida"
+      },
+      ilustracao: {
+        title: "PROJETO 02 // ILUSTRAÇÃO",
+        tags: ["Pintura Digital", "Lineart & Cor", "Fanart", "Illustrator"],
+        desc: "Ilustração digital estilizada inspirada no universo anime, com estudo anatômico, sombreamento em cel shading e composição com marca da maldição.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAiO0iAJb1a3xIZvCc4_BrSeC3rENcyWCeZkjNgPjhHHVAYYPQhPc__wg1qVZdL3Tzus3fQSoEHsgJI00wUhG3WP4LGMkdU77fzKg104TjwNJJsDxyIudhXjdavs4OWEzeP-8bKWvsDDd4J3QfFdDMMzONYs4qIL1O2WiPK2lIGvNY8yUO7Xg4moVYafq3VbqvRrhqnc7Q_lUcdWqHYdYF-LrVLDPA-gEJCcc3bVOKl8aNYAXdTYKTr",
+        alt: "Ilustração digital de personagem anime estilizado com técnicas de lineart e cel shading"
+      },
+      jake: {
+        title: "PROJETO 03 // PERSONAGEM 3D",
+        tags: ["Modelagem 3D", "Low Poly / Stylized", "Blender", "Lighting & Shading"],
+        desc: "Modelagem e texturização 3D do personagem Jake (Adventure Time), com foco em topologia limpa, materiais cartunescos e renderização com iluminação direta de estúdio.",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCWk4rQBXdZVyq6BY_5ozaRxBkVxRaGF_p8hooUTfePaKxW4sLNXKSTfEU4HS7hKnNhe-dyOV0oP12bUhEP1j1-J-V8bIZnc423rcRe2oufRQOTtec66SEVGfkvmuaqaRNKBmGmz51502iQPcqwV3P_Cc_oOfjHZtRZJCY-1yzPtoNsY4XceyJP7aKi4FOaOeg5adI7ZLr3k3bnnnf5w1-hLcbFQ7VRo8z3AK6Z6_DsB3ITL1EiRVNu",
+        alt: "Personagem 3D Jake de Hora de Aventura renderizado com sombreamento cartunesco"
+      }
+    };
+
+    function openMobileProjectModal(key) {
+      const data = mobileProjectsData[key];
+      if (!data) return;
+
+      const modal = document.getElementById('mobile-project-modal');
+      const img = document.getElementById('m-modal-image');
+      const title = document.getElementById('m-modal-title');
+      const desc = document.getElementById('m-modal-description');
+      const tagsContainer = document.getElementById('m-modal-tags');
+
+      img.src = data.image;
+      img.alt = data.alt;
+      title.textContent = data.title;
+      desc.textContent = data.desc;
+
+      tagsContainer.innerHTML = '';
+      data.tags.forEach((tag, idx) => {
+        const badge = document.createElement('span');
+        badge.className = idx === 0 
+          ? "text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20"
+          : "text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700";
+        badge.textContent = tag;
+        tagsContainer.appendChild(badge);
+      });
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileProjectModal() {
+      const modal = document.getElementById('mobile-project-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('mobile-project-modal');
+      if (e.target === modal) closeMobileProjectModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMobileProjectModal();
+    });
+
+    // ScrollSpy para Bottom Tab Navigation
+    const mobileSections = document.querySelectorAll('section[id]');
+    const mobileTabs = document.querySelectorAll('.mobile-tab');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      const scrollY = window.pageYOffset;
+
+      mobileSections.forEach(sec => {
+        const h = sec.offsetHeight;
+        const top = sec.offsetTop - 140;
+        if (scrollY >= top && scrollY < top + h) {
+          currentSection = sec.getAttribute('id');
+        }
+      });
+
+      mobileTabs.forEach(tab => {
+        const target = tab.getAttribute('data-target');
+        if (target === currentSection) {
+          tab.classList.remove('text-slate-400');
+          tab.classList.add('text-brand-cyan');
+        } else {
+          tab.classList.remove('text-brand-cyan');
+          tab.classList.add('text-slate-400');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-pedro-peixoto-carvalho",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio de Pedro Peixoto Carvalho - Produção Multimídia & 3D",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static portfolio ready for Vercel deployment'"
+  },
+  "keywords": [
+    "portfolio",
+    "3d",
+    "multimedia",
+    "blender",
+    "illustration",
+    "vercel"
+  ],
+  "author": "Pedro Peixoto Carvalho <pedropcarvalho276@gmail.com>",
+  "license": "MIT"
+}
