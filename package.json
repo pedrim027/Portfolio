@@ -4,8 +4,7 @@
   "private": true,
   "description": "Portfólio de Pedro Peixoto Carvalho - Produção Multimídia & 3D",
   "scripts": {
-    "start": "serve .",
-    "build": "echo 'Static portfolio ready for Vercel deployment'"
+    "start": "serve ."
   },
   "keywords": [
     "portfolio",
